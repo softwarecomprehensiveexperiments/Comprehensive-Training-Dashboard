@@ -19,54 +19,54 @@
 ### Redis
 1. 安装latest版本
 2. 配置文件
-```
-# redis默认不是以守护进程的方式运行，可以通过该配置项修改，使用yes启用守护进程
-deamonize yes
-# 你可以绑定单一接口，如果没有绑定，所有接口都会监听到来的连接
-#  bind 127.0.0.1
-# 因为redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中。默认为no
-appendonly yes
-# 设置Redis连接密码，如果配置了连接密码，客户端在连接Redis时需要通过
-# requirepass 123456
-rename-command CONFIG someverylongandveryunguessablestring1234
-```
-3.运行
+    ```
+    # redis默认不是以守护进程的方式运行，可以通过该配置项修改，使用yes启用守护进程
+    deamonize yes
+    # 你可以绑定单一接口，如果没有绑定，所有接口都会监听到来的连接
+    #  bind 127.0.0.1
+    # 因为redis本身同步数据文件是按上面save条件来同步的，所以有的数据会在一段时间内只存在于内存中。默认为no
+    appendonly yes
+    # 设置Redis连接密码，如果配置了连接密码，客户端在连接Redis时需要通过
+    # requirepass 123456
+    rename-command CONFIG someverylongandveryunguessablestring1234
+    ```
+3. 运行
 ```
 docker run -p 6379:6379 -p 15672:15672 -p 5672:5672 -p 25672:25672 -p 61613:61613 -p 1883:1883 -p 80:8080 -p 3306:3306 -v $PWD/redis.conf:/etc/redis/redis.conf -v $PWD/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes
 ```
 
 ### Spring boot
 
-* 生成镜像：
+* 生成镜像： 
 1. 使用maven生成jar包  
 
-2.编写dockerfile   
-```
-#指定基础镜像，在其上进行定制
-FROM java:8
-#这里的 /tmp 目录就会在运行时自动挂载为匿名卷，任何向 /tmp 中写入的信息都不会记录进容器存储层
-VOLUME /tmp
+2. 编写dockerfile   
 
-ADD target/backup-1.0.jar backup-1.0.jar
-
-#bash方式执行，使demo-1.0.0.jar可访问
-#RUN新建立一层，在其上执行这些命令，执行结束后， commit 这一层的修改，构成新的镜像。
-RUN bash -c "touch /backup-1.0.jar"
-
-#声明运行时容器提供服务端口，这只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务
-EXPOSE 8080
-
-#指定容器启动程序及参数   <ENTRYPOINT> "<CMD>"
-ENTRYPOINT ["java","-jar","backup-1.0.jar"]
-``` 
+    ```
+    #指定基础镜像，在其上进行定制
+    FROM java:8
+    #这里的 /tmp 目录就会在运行时自动挂载为匿名卷，任何向 /tmp 中写入的信息都不会记录进容器存储层
+    VOLUME /tmp
+    
+    ADD target/backup-1.0.jar backup-1.0.jar
+    
+    #bash方式执行，使demo-1.0.0.jar可访问
+    #RUN新建立一层，在其上执行这些命令，执行结束后， commit 这一层的修改，构成新的镜像。
+    RUN bash -c "touch /backup-1.0.jar"
+    
+    #声明运行时容器提供服务端口，这只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务
+    EXPOSE 8080
+    
+    #指定容器启动程序及参数   <ENTRYPOINT> "<CMD>"
+    ENTRYPOINT ["java","-jar","backup-1.0.jar"]
+    ```
 3. IDEA连接到Docker服务器并配置  
    ![配置图](/images/01-sdoc.png)  
 4. 在服务端生成镜像  
    ![配置图](/images/01-serdoc.png)   
 
 * 部署：
-1. 安装latest版本  
-2. 运行代码  
+运行代码  
 ```
 docker run -d --name backup-server --network container:736 kangaroo-backup:2.52
 ```
