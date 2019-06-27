@@ -8,10 +8,10 @@ URI(method: POST): /user/register
 json格式：
 ```
 {
-  string phone,
-  string name,
-  string password,
-  int sex
+	string phone,
+	string name,
+	string password,
+	int sex
 }
 ```
 说明：
@@ -28,9 +28,9 @@ B.后端发送应答：
 json格式：
 ```
 {
-  bool success,
-  int error_code,
-  string description
+	bool success,
+	int error_code,
+	string description
 }
 ```
 说明：   
@@ -43,8 +43,8 @@ URI(method: PUT): /user/login
 json格式：
 ```
 {
-  string key,
-  string password
+	string key,
+	string password
 }
 ```
 说明：  
@@ -54,21 +54,21 @@ B.后端发送应答：
 json格式：
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int user_id,
-    string user_name,
-    string user_phone,
-    string user_icon,
-    int user_properties,
-    int user_sex,
-    int user_completed_receive_task_count,
-  	int user_completed_release_task_count,
-  	int user_doing_receive_task_count,
-  	int user_doing_release_task_count
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int user_id,
+		string user_name,
+		string user_phone,
+		string user_icon,
+		int user_properties,
+		int user_sex,
+		int user_completed_receive_task_count,
+		int user_completed_release_task_count,
+		int user_doing_receive_task_count,
+		int user_doing_release_task_count
+	}
 }
 ```
 说明：
@@ -87,9 +87,9 @@ URI:(method: PUT): /user/logout
 B.
 ```
 {
-  bool success,
-  int error_code,
-  string description
+	bool success,
+	int error_code,
+	string description
 }
 ```
 
@@ -100,21 +100,21 @@ URI:(method: GET): /user/current_user
 B. 应答：
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int user_id,
-    string user_name,
-    string user_phone,
-    string user_icon,
-    int user_properties,
-    int user_sex,
-    int user_completed_receive_task_count,
-  	int user_completed_release_task_count,
-  	int user_doing_receive_task_count,
-  	int user_doing_release_task_count
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int user_id,
+		string user_name,
+		string user_phone,
+		string user_icon,
+		int user_properties,
+		int user_sex,
+		int user_completed_receive_task_count,
+		int user_completed_release_task_count,
+		int user_doing_receive_task_count,
+		int user_doing_release_task_count
+	}
 }
 ```
 
@@ -129,9 +129,9 @@ URI:(method: POST): /user/credit
 B.
 ```
 {
-  bool success,
-  int error_code,
-  string description
+	bool success,
+	int error_code,
+	string description
 }
 ```
 
@@ -140,11 +140,11 @@ A.
 URI:(method: PUT): /user/current_user
 ```
 {
-  string user_name,
-  string user_phone,
-  int user_sex,
-  string old_password,
-  string new_password
+	string user_name,
+	string user_phone,
+	int user_sex,
+	string old_password,
+	string new_password
 }
 ```
 说明：old_password和new_password字段可以同时为空（表示不修改），但是一旦其中一个字段不为空就必须进行密码格式检查（包括新旧密码不可一致）
@@ -152,9 +152,9 @@ URI:(method: PUT): /user/current_user
 B. 应答：
 ```
 {
-  bool success,
-  int error_code,
-  string description,
+	bool success,
+	int error_code,
+	string description,
 }
 ```
 可能的错误：用户名/手机重复，格式前端负责  
@@ -167,27 +167,27 @@ URI(method: GET): /task/public
 B. 应答：
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int total_count,
-    tasks [
-      {
-        int task_id,  
-        string task_title,
-			  string task_short_description,
-        int task_type,
-        string task_release_time,
-        string task_deadline,
-        int max_receivers_count, 
-        int task_price,
-        int current_receivers_count,（已被领取的数量）
-        bool is_rec
-      },
-      ...
-    ]
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int total_count,
+		tasks [
+			{
+				int task_id,  
+				string task_title,
+				string task_short_description,
+				int task_type,
+				string task_release_time,
+				string task_deadline,
+				int max_receivers_count, 
+				int task_price,
+				int current_receivers_count,（已被领取的数量）
+				bool is_rec
+			},
+			...
+		]
+	}
 }
 ```
 说明：
@@ -200,31 +200,31 @@ A. 前端发送请求：
 URI:(method: POST): /task
 ```
 {
-  string task_title,
-  string task_description,
-  int task_type,
-  int task_price,
-  int max_receivers_count,
-  string task_deadline,
-  questionnaire [
-  		{
-  			int question_id,
-  			string question_description,
-  			bool if_multiple_select,
-  			int options_count,
-  			string options
-  		},
-  		...
-  ]
+	string task_title,
+	string task_description,
+	int task_type,
+	int task_price,
+	int max_receivers_count,
+	string task_deadline,
+	questionnaire [
+			{
+				int question_id,
+				string question_description,
+				bool if_multiple_select,
+				int options_count,
+				string options
+			},
+			...
+	]
 }
 ```
 
 B. 应答：
 ```
 {
-  bool success,
-  int error_code,
-  string description
+	bool success,
+	int error_code,
+	string description
 }
 ```
 
@@ -236,32 +236,32 @@ URI:(method: GET): /task/short/all
 B. 应答：
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int total_count,
-    tasks [
-      {
-        int task_id,  
-        string task_title,
-		    string task_short_description,
-        int task_type,
-        string task_release_time,
-        string task_deadline,
-        int max_receivers_count, 
-        int publisher_id,
-		    string publisher_name,
-        int task_price,
-        int current_receivers_count,
-        int current_complete_count,
-        int overdue_count,
-	     	string task_state,
-		    int task_state_code
-      },
-      ...
-    ]
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int total_count,
+		tasks [
+			{
+				int task_id,  
+				string task_title,
+				string task_short_description,
+				int task_type,
+				string task_release_time,
+				string task_deadline,
+				int max_receivers_count, 
+				int publisher_id,
+				string publisher_name,
+				int task_price,
+				int current_receivers_count,
+				int current_complete_count,
+				int overdue_count,
+				string task_state,
+				int task_state_code
+			},
+			...
+		]
+	}
 }
 ```
 #### 9.2 查询<当前用户>发布的"待领取、等待完成、等待确认"任务<简介>（比如问卷不会返回详细信息）
@@ -271,32 +271,32 @@ URI:(method: GET): /task/short/release_doing
 B. 应答：
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int total_count,
-    tasks [
-      {
-        int task_id,  
-        string task_title,
-		    string task_short_description,
-        int task_type,
-        string task_release_time,
-        string task_deadline,
-        int max_receivers_count, 
-        int publisher_id,
-		    string publisher_name,
-        int task_price,
-        int current_receivers_count,
-        int current_complete_count,
-        int overdue_count,
-		    string task_state,
-		    int task_state_code
-      },
-      ...
-    ]
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int total_count,
+		tasks [
+			{
+				int task_id,  
+				string task_title,
+				string task_short_description,
+				int task_type,
+				string task_release_time,
+				string task_deadline,
+				int max_receivers_count, 
+				int publisher_id,
+				string publisher_name,
+				int task_price,
+				int current_receivers_count,
+				int current_complete_count,
+				int overdue_count,
+				string task_state,
+				int task_state_code
+			},
+			...
+		]
+	}
 }
 ```
 
@@ -307,32 +307,32 @@ URI:(method: GET): /task/short/release_completed
 B. 应答：
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int total_count,
-    tasks [
-      {
-        int task_id,  
-        string task_title,
-		    string task_short_description,
-        int task_type,
-        string task_release_time,
-        string task_deadline,
-        int max_receivers_count,
-        int publisher_id,
-		    string publisher_name,.
-        int task_price,
-        int current_receivers_count,
-        int current_complete_count,
-        int overdue_count,（逾期数，领取并且未完成的）
-        string task_state,
-		    int task_state_code
-      },
-      ...
-    ]
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int total_count,
+		tasks [
+			{
+				int task_id,  
+				string task_title,
+				string task_short_description,
+				int task_type,
+				string task_release_time,
+				string task_deadline,
+				int max_receivers_count,
+				int publisher_id,
+				string publisher_name,.
+				int task_price,
+				int current_receivers_count,
+				int current_complete_count,
+				int overdue_count,（逾期数，领取并且未完成的）
+				string task_state,
+				int task_state_code
+			},
+			...
+		]
+	}
 }
 ```
 
@@ -344,28 +344,28 @@ URI:(method: GET): /transaction/short/all
 B.
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int total_count,
-    transactions [
-      {
-      	int transaction_id,
-        int task_id,  
-        string task_title,
-		    string task_short_description,
-        int task_type,
-        string task_deadline,
-        int task_price,
-        string transaction_complete_time,
-        string transaction_start_time,
-        string state,
-		    int transaction_state_code
-      },
-      ...
-    ]
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int total_count,
+		transactions [
+			{
+				int transaction_id,
+				int task_id,  
+				string task_title,
+				string task_short_description,
+				int task_type,
+				string task_deadline,
+				int task_price,
+				string transaction_complete_time,
+				string transaction_start_time,
+				string state,
+				int transaction_state_code
+			},
+			...
+		]
+	}
 }
 ```
 
@@ -376,28 +376,28 @@ URI:(method: GET): /transaction/short/receive_doing
 B.
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int total_count,
-    transactions [
-      {
-      	int transaction_id,
-        int task_id,  
-        string task_title,
-		    string task_short_description,
-        int task_type,
-        string task_deadline,
-        int task_price
-        string transaction_complete_time,
-        string transaction_start_time,）
-        string state,
-	     	int transaction_state_code
-      },
-      ...
-    ]
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int total_count,
+		transactions [
+			{
+				int transaction_id,
+				int task_id,  
+				string task_title,
+				string task_short_description,
+				int task_type,
+				string task_deadline,
+				int task_price
+				string transaction_complete_time,
+				string transaction_start_time,）
+				string state,
+				int transaction_state_code
+			},
+			...
+		]
+	}
 }
 ```
 
@@ -408,28 +408,28 @@ URI:(method: GET): /transaction/short/receive_completed
 B.
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-    int total_count,
-    transactions [
-      {
-        int transaction_id,
-        int task_id,  
-        string task_title,
-		    string task_short_description,
-        int task_type,
-        string task_deadline,
-        int task_price
-        string transaction_complete_time,
-        string transaction_start_time,
-        string state,
-		    int transaction_state_code
-      },
-      ...
-    ]
-  }
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int total_count,
+		transactions [
+			{
+				int transaction_id,
+				int task_id,  
+				string task_title,
+				string task_short_description,
+				int task_type,
+				string task_deadline,
+				int task_price
+				string transaction_complete_time,
+				string transaction_start_time,
+				string state,
+				int transaction_state_code
+			},
+			...
+		]
+	}
 }
 ```
 
@@ -440,37 +440,37 @@ URI:(method: GET):/task/detail/{taskId}
 B.
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
-	  int task_id,  
-	  string task_title,
-	  string task_description,
-	  int task_type,
-	  string task_release_time,
-	  string task_deadline,
-	  int max_receivers_count,
-	  int task_price,
-	  string publisher_id,
-	  string publisher_name,
-	  string complete_date,(和状态有关：当任务为"已完成"时为完成时间，为"已取消"时为取消时间)
-	  int current_receivers_count,
-	  int current_complete_count,
-	  string state,(任务当前状态，包括："待领取", "等待完成", "等待确认", "已完成", "已取消")
-	  int task_state_code
-	  questionnaire [
-	  		{
-	  			int question_id,
-	  			string question_description,
-	  			bool if_multiple_select,
-	  			int options_count,
-	  			string options
-	  		},
-	  		...
-	  ]
-	  string task_result,
-	  string receiver_names
+	bool success,
+	int error_code,
+	string description,
+	result {
+		int task_id,  
+		string task_title,
+		string task_description,
+		int task_type,
+		string task_release_time,
+		string task_deadline,
+		int max_receivers_count,
+		int task_price,
+		string publisher_id,
+		string publisher_name,
+		string complete_date,(和状态有关：当任务为"已完成"时为完成时间，为"已取消"时为取消时间)
+		int current_receivers_count,
+		int current_complete_count,
+		string state,(任务当前状态，包括："待领取", "等待完成", "等待确认", "已完成", "已取消")
+		int task_state_code
+		questionnaire [
+				{
+					int question_id,
+					string question_description,
+					bool if_multiple_select,
+					int options_count,
+					string options
+				},
+				...
+		]
+		string task_result,
+		string receiver_names
 	}
 }
 ```
@@ -482,32 +482,32 @@ URI:(method: GET):/transaction/detail/{transactionId}
 B.
 ```
 {
-  bool success,
-  int error_code,
-  string description,
-  result {
+	bool success,
+	int error_code,
+	string description,
+	result {
 	int transaction_id,
-    int task_id,  
-    int publisher_id,
-    string publisher_name,
-    string task_title,
-	  string task_description,
-    int task_type,
-    string task_deadline,
-    int task_price,
-    string transaction_complete_time,
-    string transaction_start_time,（领取时间）
-    string state,
-	  int transaction_state_code
-	  questionnaire [
-	  	{
-	  	  int question_id,
-	    	string question_description,
-	    	bool if_multiple_select,
-	    	int options_count,
-	    	string options（同上）
-	  	},
-	  		...
+		int task_id,  
+		int publisher_id,
+		string publisher_name,
+		string task_title,
+		string task_description,
+		int task_type,
+		string task_deadline,
+		int task_price,
+		string transaction_complete_time,
+		string transaction_start_time,（领取时间）
+		string state,
+		int transaction_state_code
+		questionnaire [
+			{
+				int question_id,
+				string question_description,
+				bool if_multiple_select,
+				int options_count,
+				string options（同上）
+			},
+				...
 	]
 	string committion（问卷形式：答案与答案间使用@@隔开）
 	}
@@ -521,9 +521,9 @@ URI:(method: POST):/transaction?task_id=
 B.
 ```
 {
-   bool success,
-   int error_code,
-   string description,
+	 bool success,
+	 int error_code,
+	 string description,
 }
 ```
 
@@ -541,8 +541,8 @@ B.
 ```
 {
 	bool success,
-  int error_code,
-  string description,
+	int error_code,
+	string description,
 }
 ```
 
@@ -554,8 +554,8 @@ B.
 ```
 {
 	bool success,
-  int error_code,
-  string description,
+	int error_code,
+	string description,
 }
 ```
 
@@ -567,8 +567,8 @@ B.
 ```
 {
 	bool success,
-  int error_code,
-  string description,
+	int error_code,
+	string description,
 }
 ```
 
@@ -580,8 +580,8 @@ B.
 ```
 {
 	bool success,
-  int error_code,
-  string description,
+	int error_code,
+	string description,
 }
 ```
 

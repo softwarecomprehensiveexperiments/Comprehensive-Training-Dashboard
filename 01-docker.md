@@ -38,6 +38,7 @@ docker run -p 6379:6379 -p 15672:15672 -p 5672:5672 -p 25672:25672 -p 61613:6161
 ### Spring boot
 
 * 生成镜像： 
+
 1. 使用maven生成jar包  
 
 2. 编写dockerfile   
