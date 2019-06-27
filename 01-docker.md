@@ -38,8 +38,9 @@ docker run -p 6379:6379 -p 15672:15672 -p 5672:5672 -p 25672:25672 -p 61613:6161
 ### Spring boot
 
 * 生成镜像：
-1.使用maven生成jar包。
-2.dockerfile 
+1. 使用maven生成jar包  
+
+2.编写dockerfile   
 ```
 #指定基础镜像，在其上进行定制
 FROM java:8
@@ -57,30 +58,31 @@ EXPOSE 8080
 
 #指定容器启动程序及参数   <ENTRYPOINT> "<CMD>"
 ENTRYPOINT ["java","-jar","backup-1.0.jar"]
-```
-3. IDEA连接到Docker服务器并配置
-   ![配置图](/images/01-sdoc.png)
-   4.在服务端生成镜像
+``` 
+3. IDEA连接到Docker服务器并配置  
+   ![配置图](/images/01-sdoc.png)  
+4. 在服务端生成镜像  
+   ![配置图](/images/01-serdoc.png)   
 
 * 部署：
-1. 安装latest版本
-2. 运行代码
+1. 安装latest版本  
+2. 运行代码  
 ```
 docker run -d --name backup-server --network container:736 kangaroo-backup:2.52
 ```
 
 ### MySQL
-1. 安装latest版本
-2. 配置文件
-![配置图](/images/01-sp.png)
-3. 运行代码
+1. 安装latest版本  
+2. 配置文件  
+![配置图](/images/01-sp.png)  
+3. 运行代码  
 ```
 docker run --name mysql --network container:736 -e MYSQL_ROOT_PASSWORD=chen -d mysql
 ```
 
 ### RabbitMQ
-1. 安装latest版本
-2. 运行代码
+1. 安装latest版本  
+2. 运行代码  
 ```
 docker run -d --network container:736 --name rabbit -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin rabbitmq:management
 ```
@@ -88,18 +90,22 @@ docker run -d --network container:736 --name rabbit -e RABBITMQ_DEFAULT_USER=adm
 ## 前端部署说明
 
 ### 安装包
-本项目是基于微信小程序平台开发的web小程序，不需要通过安装包进行安装。
+本项目是基于微信小程序平台开发的web小程序，不需要通过安装包进行安装。  
+
 **由于小程序无法完成微信小程序的审核，需要使用可联系小组组长(微信/QQ：1004920224)，加入测试人员名单即可正常使用**
 
 ### 源代码
-后端Github仓库：[链接](https://github.com/softwarecomprehensiveexperiments/pocket-kangaroo-backup)
-前端Github仓库：[链接](https://github.com/softwarecomprehensiveexperiments/pocket-kangaroo-frontend)
+后端Github仓库：[链接](https://github.com/softwarecomprehensiveexperiments/pocket-kangaroo-backup)  
+
+前端Github仓库：[链接](https://github.com/softwarecomprehensiveexperiments/pocket-kangaroo-frontend)  
 
 ### 安装部署
 
-添加开发项目
-![配置图](/images/01-kaifa.png)
-注册导入
-![配置图](/images/01-daoru.png)
-绑定成员信息并发布
-![配置图](/images/01-fabu.png)
+添加开发项目    
+![配置图](/images/01-kaifa.png)  
+
+注册导入  
+![配置图](/images/01-daoru.png)  
+
+绑定成员信息并发布  
+![配置图](/images/01-fabu.png)  
