@@ -72,9 +72,10 @@
 分工：前端开发、UI设计  
 完成工作：产品经理组长、UI设计、前端实现登录注册+个人信息+账户信息+任务信息页面、需求规格说明书与UI设计文档  
 
-![gitcon](images/06-chl.png)  
+前端仓库（开发3分支）：
 
-![gitcon](images/06-chl2.png)  
+![gitcon](images/06-chl.png)  
+ 
 
 
 
