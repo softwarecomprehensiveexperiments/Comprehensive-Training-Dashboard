@@ -57,22 +57,22 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 #### 4.1
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627223419646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x1.png)
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627223427374.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x2.png)
 
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222259623.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x3.png)
 
 
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222323149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x4.png)
 
 
 
@@ -88,7 +88,7 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222356254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x5.png)
 
 
 
@@ -105,7 +105,7 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222404732.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x6.png)
 
 
 
@@ -120,13 +120,13 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222411301.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x7.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627223230956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x8.png)
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222433521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x9.png)
 
 
 
@@ -137,7 +137,7 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222508588.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x10.png)
 
 
 
@@ -151,7 +151,7 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222520857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x11.png)
 
 
 
@@ -165,7 +165,7 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627222530230.png)
+![在这里插入图片描述](image/x12.png)
 
 
 
@@ -178,13 +178,13 @@ a. 计算机型号、主存容量：windows7及以上、ios9.0及以上（可以
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627223308499.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x13.png)
 
 
 
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190627223320319.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MzQ5Mjg1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](image/x14.png)
 
 #### 4.2求助查询
 前端显示问题：陈金坤
